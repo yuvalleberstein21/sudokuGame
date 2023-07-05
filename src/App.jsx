@@ -7,8 +7,6 @@ import { validateBoxGrid, validateCol, validateRow } from './components/validate
 import AlertMessage from './components/AlertMessage';
 
 
-
-
 const randomNumber = [
   [5, -1, -1, 9, -1, -1, -1, -1, -1],
   [-1, 4, -1, -1, -1, 8, -1, -1, 7],
@@ -22,19 +20,17 @@ const randomNumber = [
 ];
 
 
-
 function App() {
-
   const [sudokuArr, setSudokuArr] = useState(randomNumber);
 
   const handleChange = (e, rowI, colI) => {
     let value = parseInt(e.target.value) || -1;
-    let grid = GetDeepCopy(sudokuArr);
+    let newGrid = GetDeepCopy(sudokuArr);
 
     if (value === -1 || value >= 1 && value <= 9) {
-      grid[rowI][colI] = value;
+      newGrid[rowI][colI] = value;
     }
-    setSudokuArr(grid);
+    setSudokuArr(newGrid);
   }
 
   const handleCheck = () => {

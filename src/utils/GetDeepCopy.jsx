@@ -1,4 +1,4 @@
 export default function GetDeepCopy(arr) {
-    //ensure that the value is interpreted as an integer.
+    //Convert the array to a JSON string and then parse it back to an object
     return JSON.parse(JSON.stringify(arr));
 }
