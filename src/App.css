@@ -52,9 +52,9 @@ td {
   font-size: 14px;
   margin: 0px 20px;
 }
-.bBorder {
+.bottomBorder {
   border-bottom: 2px solid black;
 }
-.rBorder {
+.rightBorder {
   border-right: 2px solid black;
 }

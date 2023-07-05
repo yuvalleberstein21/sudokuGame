@@ -1,0 +1,55 @@
+
+/// Explanation of the project ///
+
+// SERVICES //
+
+Install all modules using : npm install
+Start the project using : npm run dev
+
+// Order of operations of the project //
+
+* Create a global array that includes array of 9 numbers 9 times.
+* Create a state and set the global array.
+* To build the template of Sudoku game i'm using a map 
+on the state to get rows and create another map to get the cols.
+* The value of this rows and cols will be the state in position of [rows][cols] , If its -1 show empty cell.
+* disabled all cell thet not empty (-1);
+* Finally create a onChange to get the value of the input and use the rows and cols.
+
+// handleChange function //
+
+* Get the value of input by target.value and parse it to integer to not get NaN
+ and if it is fail the value is -1.
+* If range from 1-9 and for empty cell it should be -1 the new state grid will be use the value [rowI][colI].
+
+// handleCheck function //
+
+* Checking if the sudoku game is valid using another function validateSudoku().
+* If is valid or not i'm using react toatsify alert.
+
+// validateSudoku function // 
+
+* Run a for loop to get the postion on sudokuArray ..
+* Create if statment to valid if the row,col,boxGrid is validate.
+
+// validateRow, validateCol functions //
+
+* Create a new set to get a new value.
+* Run a for loop to get the exactly position in row or col .
+* check for duplicate cell, if we just have a number on cell return false, else add the value to newSet. 
+
+// validateBoxGrid function //
+
+* Like a row and col , we create a newSet to set a value.
+* Checking for position of the row and col in box grid.
+* For the starting row we get the index and division of boxGrid by 3, after Multiplying by 3 to ensure that row falls at the beginning of the respective box grid.
+* For the starting col we get the col index by using modulo operation of boxGrid with 3. Taking the modulo by 3  "      ".
+* Run a for loop to retrieve the value from the Sudoku array using sudokuArray[i][j],
+ where i represents the current row index and j represents the current column index.
+ * Finally If the retrieved value is not equal to zero (value !== 0), 
+ it means the cell is filled with a number, return false else set a value
+
+
+
+
+
